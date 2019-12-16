@@ -1,10 +1,12 @@
 import React from 'react';
 
+import '../styles/DigitalDisplay.css';
+
 class DigitalDisplay extends React.Component {
     render() {
         return (
-            <div>
-                <h1>Digital Display</h1>
+            <div className="displayContainer">
+                <h1>0</h1>
             </div>
         )
     }
