@@ -6,10 +6,14 @@ class Button extends React.Component {
 
     ifZeroButton() {
         if(this.props.number === "0") {
-            return <button className="button zeroButton">{this.props.number}</button>
+            return <button className="button zeroButton" onClick={() => this.logButtonClicked(this.props.number)}>{this.props.number}</button>
         } else {
-            return <button className="button">{this.props.number}</button>
+            return <button className="button" onClick={() => this.logButtonClicked(this.props.number)}>{this.props.number}</button>
         }
+    }
+
+    logButtonClicked(number) {
+        console.log(number);
     }
 
     render() {
