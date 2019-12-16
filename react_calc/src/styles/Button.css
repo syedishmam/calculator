@@ -1,0 +1,13 @@
+.button {
+    margin: .25rem;
+    width: 5.5rem;
+    height: 5.5rem;
+}
+
+.buttonsTable {
+    margin: auto;
+}
+
+.zeroButton {
+    width: 11.75rem;
+}
