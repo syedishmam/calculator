@@ -7,37 +7,36 @@ class ButtonPad extends React.Component {
     render() {
         return(
             <div className="buttonPadContainer">
-                <table>
+                <table className="buttonsTable">
                     <tbody>
                         <tr>
-                            <th><Button number="C"/></th>
-                            <th><Button number="+/-"/></th>
-                            <th><Button number="%"/></th>
-                            <th><Button number="/"/></th>
+                            <td><Button number="C"/></td>
+                            <td><Button number="+/-"/></td>
+                            <td><Button number="%"/></td>
+                            <td><Button number="/"/></td>
                         </tr>
                         <tr>
-                            <th><Button number="7"/></th>
-                            <th><Button number="8"/></th>
-                            <th><Button number="9"/></th>
-                            <th><Button number="X"/></th>
+                            <td><Button number="7"/></td>
+                            <td><Button number="8"/></td>
+                            <td><Button number="9"/></td>
+                            <td><Button number="X"/></td>
                         </tr>
                         <tr>
-                            <th><Button number="4"/></th>
-                            <th><Button number="5"/></th>
-                            <th><Button number="6"/></th>
-                            <th><Button number="-"/></th>
+                            <td><Button number="4"/></td>
+                            <td><Button number="5"/></td>
+                            <td><Button number="6"/></td>
+                            <td><Button number="-"/></td>
                         </tr>
                         <tr>
-                            <th><Button number="1"/></th>
-                            <th><Button number="2"/></th>
-                            <th><Button number="3"/></th>
-                            <th><Button number="+"/></th>
+                            <td><Button number="1"/></td>
+                            <td><Button number="2"/></td>
+                            <td><Button number="3"/></td>
+                            <td><Button number="+"/></td>
                         </tr>
                         <tr>
-                            <th><Button number="0"/></th>
-                            <th><Button number="0"/></th>
-                            <th><Button number="."/></th>
-                            <th><Button number="="/></th>
+                            <td colspan="2" ><Button number="0"/></td>
+                            <td><Button number="."/></td>
+                            <td><Button number="="/></td>
                         </tr>
                     </tbody>
                 </table>
