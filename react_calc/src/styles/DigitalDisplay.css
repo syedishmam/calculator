@@ -1,5 +1,8 @@
 .displayContainer {
-    height: 5rem;
-    padding: 1rem;
+    margin: auto;
+    padding-top: 3vh;
+    height: 10vh;
+    width: 305px;
     border: black solid 1px;
+    text-align: center;
 }

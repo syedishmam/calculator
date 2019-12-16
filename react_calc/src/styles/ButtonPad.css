@@ -1,5 +1,5 @@
 .buttonPadContainer {
-    margin-top: .5rem;
-    padding-bottom: .5rem;
+    margin: auto;
     border: black solid 1px;
+    width: 305px;
 }

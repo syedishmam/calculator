@@ -6,7 +6,7 @@ import '../styles/ButtonPad.css';
 class ButtonPad extends React.Component {
     render() {
         return(
-            <div className="buttonPadContainer">
+            <div className="buttonPadContainer space-around">
                 <table className="buttonsTable">
                     <tbody>
                         <tr>
@@ -34,7 +34,8 @@ class ButtonPad extends React.Component {
                             <td><Button number="+"/></td>
                         </tr>
                         <tr>
-                            <td colSpan="2" ><Button number="0"/></td>
+                            <td><Button number="="/></td>
+                            <td><Button number="="/></td>
                             <td><Button number="."/></td>
                             <td><Button number="="/></td>
                         </tr>
@@ -46,3 +47,4 @@ class ButtonPad extends React.Component {
 }
 
 export default ButtonPad;
+
