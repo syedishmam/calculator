@@ -1,17 +1,17 @@
 .container {
-<<<<<<< HEAD
     margin: auto;
     margin-top: 2rem;
     padding: .5rem;
     height:100vh;
-    max-height: 550px;
+    max-height: 540px;
     width: 100vw;
-    max-width: 400px;
+    max-width: 375px;
     border: black solid 1px;
-=======
-    padding: 2%;
-    height:100%;
-    width: 100%;
-    max-width: 100%;
->>>>>>> 77b10f1730d99d0a6978d8827641911c67758986
+}
+
+@media only screen and (max-width: 374px) {
+    .container {
+        max-width: 319px;
+        max-height: 475px;
+    }
 }

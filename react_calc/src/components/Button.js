@@ -16,10 +16,11 @@ class Button extends React.Component {
 
     clickButton(number) {
         if(this.props.keyPressed) {
-            
+            const keys = this.props.keyPressed.concat(this.props.keyPressed, number);
+            this.props.keyPress(keys);
+        } else {
+            this.props.keyPress(number);
         }
-        const keys = this.props.keyPressed.concat(this.props.keyPressed, number);
-        this.props.keyPress(keys);
     }
 
     render() {
