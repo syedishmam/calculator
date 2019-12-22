@@ -8,7 +8,7 @@
 }
 
 .zeroButton {
-    width: 11.75rem;
+    width: 10.25rem;
 }
 
 @media only screen and (min-width: 375px) {
@@ -18,6 +18,6 @@
     }
 
     .zeroButton {
-        width: 11.75rem;
+        width: 12.25rem;
     }
 }
