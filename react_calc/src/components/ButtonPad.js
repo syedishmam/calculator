@@ -34,8 +34,7 @@ class ButtonPad extends React.Component {
                             <td><Button number="+"/></td>
                         </tr>
                         <tr>
-                            <td><Button number="="/></td>
-                            <td><Button number="="/></td>
+                            <td colSpan="2"><Button number="0"/></td>
                             <td><Button number="."/></td>
                             <td><Button number="="/></td>
                         </tr>

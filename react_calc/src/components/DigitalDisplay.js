@@ -10,8 +10,8 @@ class DigitalDisplay extends React.Component {
     }
 
     renderDisplay() {
-        if(this.props.keyPressed) {
-            return <h1>{this.props.keyPressed}</h1>;
+        if(this.props.keysPressed) {
+            return <h1>{this.props.keysPressed}</h1>;
         } else {
             return <h1>0</h1>
         }
@@ -28,7 +28,7 @@ class DigitalDisplay extends React.Component {
 
 const mapStateToProps = (state) => {
     return {
-        keyPressed: state.keyPressed.keyPressed
+        keysPressed: state.keysPressed.keysPressed
     }
 }
 

@@ -15,8 +15,8 @@ class Button extends React.Component {
     }
 
     clickButton(number) {
-        if(this.props.keyPressed) {
-            let keys = this.props.keyPressed.concat(number);
+        if(this.props.keysPressed) {
+            let keys = this.props.keysPressed.concat(number);
             this.props.keyPress(keys);
         } else {
             this.props.keyPress(number);
@@ -34,7 +34,7 @@ class Button extends React.Component {
 
 const mapStateToProps = (state) => {
     return {
-        keyPressed: state.keyPressed.keyPressed
+        keysPressed: state.keysPressed.keysPressed
     }
 }
 

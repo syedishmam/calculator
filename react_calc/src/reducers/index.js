@@ -1,7 +1,7 @@
 import {combineReducers} from 'redux';
 
-import keyPressReducer from './keyPressReducer.js';
+import keysPressedReducer from './keysPressedReducer.js';
 
 export default combineReducers({
-    keyPressed: keyPressReducer
+    keysPressed: keysPressedReducer
 });
