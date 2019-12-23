@@ -18,20 +18,53 @@ class Button extends React.Component {
 
     clickButton(unit) {
         const allKeys = this.props.keysPressed;
-        if(unit === 'C') {
-            this.props.keyPress('1');
-        } else if(unit === 'DEL') {
-            this.deleteButtonLogic(allKeys);
-        } else if(unit === '+/-') {
-            this.negateButtonLogic(allKeys)
-        } else if(unit === '/') {
-            this.operatorButtonLogic(allKeys, '/');
-        } else if(unit === '*') {
-            this.operatorButtonLogic(allKeys, '*');
-        } else if(unit === '-') {
-            this.operatorButtonLogic(allKeys, '-');
-        } else if(unit === '+') {
-            this.operatorButtonLogic(allKeys, '+');
+        switch(unit) {
+            case 'C':
+                return this.props.keyPress('1');
+            case 'DEL':
+                return this.deleteButtonLogic(allKeys);
+            case '+/-':
+                return this.negateButtonLogic(allKeys)
+            case '/':
+                return this.operatorButtonLogic(allKeys, '/');
+            case '*':
+                return this.operatorButtonLogic(allKeys, '*');
+            case '-':
+                return this.operatorButtonLogic(allKeys, '-');
+            case '+':
+                return this.operatorButtonLogic(allKeys, '+');
+            case '.':
+                return this.operatorButtonLogic(allKeys, '.');          
+            default: 
+                this.pushNumButtonLogic(allKeys, unit);
+        }
+    }
+
+    operatorButtonLogic(keys, operator) {
+        let pushOperator;
+        if( keys 
+            && keys[keys.length - 1] !== '/'
+            && keys[keys.length - 1] !== '*' 
+            && keys[keys.length - 1] !== '-' 
+            && keys[keys.length - 1] !== '+' 
+            && keys[keys.length - 1] !== '.'
+        ) {
+            if(operator === '/') {
+                pushOperator = keys.concat('/'); 
+                this.props.keyPress(pushOperator);
+            } else if(operator === '*') {
+                pushOperator = keys.concat('*'); 
+                this.props.keyPress(pushOperator);
+            } else if(operator === '-') {
+                pushOperator = keys.concat('-'); 
+                this.props.keyPress(pushOperator);
+            } else if(operator === '+') {
+                pushOperator = keys.concat('+'); 
+                this.props.keyPress(pushOperator);
+            } else if(operator === '.') {
+                pushOperator = keys.concat('.'); 
+                this.props.keyPress(pushOperator);
+            }
         }
     }
 
@@ -54,29 +87,19 @@ class Button extends React.Component {
         }
     }
 
-    operatorButtonLogic(keys, operator) {
-        let pushOperator;
-        if(keys && keys[keys.length - 1] !== '/' && keys[keys.length - 1] !== '*' && keys[keys.length - 1] !== '-' && keys[keys.length - 1] !== '+') {
-            if(operator === '/') {
-                pushOperator = keys.concat('/'); 
-                this.props.keyPress(pushOperator);
-            } else if(operator === '*') {
-                pushOperator = keys.concat('*'); 
-                this.props.keyPress(pushOperator);
-            } else if(operator === '-') {
-                pushOperator = keys.concat('-'); 
-                this.props.keyPress(pushOperator);
-            } else if(operator === '+') {
-                pushOperator = keys.concat('+'); 
-                this.props.keyPress(pushOperator);
-            }
-        }
-    }
-
     multiplyButtonLogic(keys) {
         if(keys && keys[keys.length - 1] !== '*') {
             const pushDivideSymbol = keys.concat('*'); 
             this.props.keyPress(pushDivideSymbol);
+        }
+    }
+
+    pushNumButtonLogic(keys, unit) {
+        if(keys) {
+            const addNum = keys.concat(unit);
+            this.props.keyPress(addNum);
+        } else {
+            this.props.keyPress(unit);
         }
     }
 
